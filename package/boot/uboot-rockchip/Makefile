@@ -42,6 +42,15 @@ define U-Boot/rock-pi-s-rk3308
     radxa_rock-pi-s
 endef
 
+define U-Boot/sakura-pi-rk3308
+  $(U-Boot/rk3308/Default)
+  DEPENDS:=+PACKAGE_u-boot-$(1):trusted-firmware-a-rk3308-sakura-pi
+  TPL:=rk3308_ddr_589MHz_uart2_m1_v2.07.bin
+  NAME:=Sakura Pi RK3308B
+  BUILD_DEVICES:= \
+    sakurapi_sakura-pi
+endef
+
 # RK3328 boards
 
 define U-Boot/rk3328/Default
@@ -303,6 +312,7 @@ UBOOT_TARGETS := \
   rock-pi-4-rk3399 \
   rockpro64-rk3399 \
   rock-pi-s-rk3308 \
+  sakura-pi-rk3308 \
   nanopi-r2c-rk3328 \
   nanopi-r2c-plus-rk3328 \
   nanopi-r2s-rk3328 \

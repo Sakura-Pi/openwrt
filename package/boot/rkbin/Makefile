@@ -38,6 +38,13 @@ define Trusted-Firmware-A/rk3308-rock-pi-s
   TPL:=rk33/rk3308_ddr_589MHz_uart0_m0_v2.07.bin
 endef
 
+define Trusted-Firmware-A/rk3308-sakura-pi
+  NAME:=Sakura Pi RK3308B
+  BUILD_SUBTARGET:=armv8
+  ATF:=rk33/rk3308_bl31_v2.26.elf
+  TPL:=rk33/rk3308_ddr_589MHz_uart2_m1_v2.07.bin
+endef
+
 define Trusted-Firmware-A/rk3566
   BUILD_SUBTARGET:=armv8
   ATF:=rk35/rk3568_bl31_v1.44.elf
@@ -66,6 +73,7 @@ endef
 TFA_TARGETS:= \
 	rk3308 \
 	rk3308-rock-pi-s \
+	rk3308-sakura-pi \
 	rk3566 \
 	rk3568 \
 	rk3568-e25 \

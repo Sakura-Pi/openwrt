@@ -110,6 +110,9 @@ define Package/brcmfmac-nvram-43455-sdio/install
 	$(INSTALL_DATA) \
 		$(PKG_BUILD_DIR)/brcm/brcmfmac43455-sdio.acepc-t8.txt \
 		$(1)/lib/firmware/brcm/
+	$(LN) \
+		brcmfmac43455-sdio.acepc-t8.txt \
+		$(1)/lib/firmware/brcm/brcmfmac43455-sdio.txt
 	$(INSTALL_DATA) \
 		$(PKG_BUILD_DIR)/brcm/brcmfmac43455-sdio.raspberrypi,3-model-b-plus.txt \
 		$(1)/lib/firmware/brcm/
