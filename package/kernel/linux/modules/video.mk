@@ -267,7 +267,6 @@ endef
 
 $(eval $(call KernelPackage,fb-tft-ili9486))
 
-
 define KernelPackage/drm
   SUBMENU:=$(VIDEO_MENU)
   TITLE:=Direct Rendering Manager (DRM) support

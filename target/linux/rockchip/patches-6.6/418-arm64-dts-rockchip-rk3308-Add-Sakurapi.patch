@@ -1,6 +1,6 @@
 --- /dev/null
 +++ b/arch/arm64/boot/dts/rockchip/rk3308-sakurapi-rk3308b.dts
-@@ -0,0 +1,313 @@
+@@ -0,0 +1,314 @@
 +// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
 +/*
 + * Copyright (c) 2019 Akash Gajjar <akash@openedev.com>
@@ -292,6 +292,7 @@
 +};
 +
 +&usb20_otg {
++	dr_mode = "peripheral";
 +	status = "okay";
 +};
 +
@@ -304,7 +305,7 @@
 +};
 +
 +&u2phy_host {
-+	state = "okay";
++	status = "okay";
 +};
 +
 +&usb_host_ehci {
